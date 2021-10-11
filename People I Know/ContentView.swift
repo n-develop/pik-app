@@ -8,38 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var myContacts = contacts
     
     var body: some View {
-        VStack{
-            Text("People I Know")
-                .font(.title)
-            List(contacts, id:\.email) { item in
-                
-                HStack(alignment:.top, spacing: 5.0) {
-                    Image("unknown")
-                        .resizable()
-                        .scaledToFit()
-                                            .frame(minWidth: 40, idealWidth: 50, maxWidth: 70, minHeight: 40, idealHeight: 50, maxHeight: 70, alignment: .center)
-                        .cornerRadius(50)
-                        
-                    VStack(alignment:.leading){
-                        Text("\(item.firstname) \(item.lastname)")
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        Text("\(item.email)")
-                            .font(.caption)
-                        Text("\(item.address)")
-                            .font(.caption)
+        NavigationView{
+            VStack{
+                List(0..<myContacts.count){ index in
+                    NavigationLink(destination:ContactView(contact: $myContacts[index])){
+                        ContactTeaser(contact: $myContacts[index])
                     }
-                    Spacer()
                 }
-                .cornerRadius(15)
             }
+            .navigationTitle("People I Know")
         }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ContactTeaser: View {
+    @Binding var contact: Contact
+    var body: some View {
+        HStack(alignment:.top, spacing: 5.0) {
+            Image("unknown")
+                .resizable()
+                .scaledToFit()
+                .frame(minWidth: 40, idealWidth: 50, maxWidth: 70, minHeight: 40, idealHeight: 50, maxHeight: 70, alignment: .center)
+                .cornerRadius(50)
+            
+            VStack(alignment:.leading){
+                Text("\(contact.firstname) \(contact.lastname)")
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                Text("\(contact.email)")
+                    .font(.caption)
+                Text("\(contact.address)")
+                    .font(.caption)
+            }
+            Spacer()
+        }
+        .cornerRadius(15)
     }
 }
