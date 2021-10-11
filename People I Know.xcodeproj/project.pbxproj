@@ -13,6 +13,7 @@
 		2819221626E7E36000503F9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2819221526E7E36000503F9F /* Preview Assets.xcassets */; };
 		2819221F26E7E3E400503F9F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819221E26E7E3E400503F9F /* Contact.swift */; };
 		286068DA2714CF3A00B44A76 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286068D92714CF3A00B44A76 /* ContactView.swift */; };
+		286068DD2714D4D600B44A76 /* ContactTeaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286068DC2714D4D600B44A76 /* ContactTeaser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2819221726E7E36000503F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2819221E26E7E3E400503F9F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		286068D92714CF3A00B44A76 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		286068DC2714D4D600B44A76 /* ContactTeaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTeaser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2819221726E7E36000503F9F /* Info.plist */,
 				2819221426E7E36000503F9F /* Preview Content */,
 				286068D92714CF3A00B44A76 /* ContactView.swift */,
+				286068DC2714D4D600B44A76 /* ContactTeaser.swift */,
 			);
 			path = "People I Know";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				2819221F26E7E3E400503F9F /* Contact.swift in Sources */,
 				2819221126E7E35600503F9F /* ContentView.swift in Sources */,
+				286068DD2714D4D600B44A76 /* ContactTeaser.swift in Sources */,
 				2819220F26E7E35600503F9F /* People_I_KnowApp.swift in Sources */,
 				286068DA2714CF3A00B44A76 /* ContactView.swift in Sources */,
 			);
