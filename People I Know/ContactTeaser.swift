@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactTeaser: View {
-    @Binding var contact: Contact
+    let contact: Contact
     var body: some View {
         HStack(alignment:.top, spacing: 5.0) {
             Image("unknown")
@@ -20,6 +20,7 @@ struct ContactTeaser: View {
             VStack(alignment:.leading){
                 Text("\(contact.firstname) \(contact.lastname)")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color.accentColor)
                 Text("\(contact.email)")
                     .font(.caption)
                 Text("\(contact.address)")
@@ -33,6 +34,6 @@ struct ContactTeaser: View {
 
 struct ContactTeaser_Previews: PreviewProvider {
     static var previews: some View {
-        ContactTeaser(contact: .constant(contacts.first!))
+        ContactTeaser(contact: contacts.first!)
     }
 }

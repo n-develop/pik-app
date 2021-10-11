@@ -14,14 +14,13 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 List(0..<myContacts.count){ index in
-                    NavigationLink(destination:ContactView(contact: $myContacts[index])){
-                        ContactTeaser(contact: $myContacts[index])
+                    NavigationLink(destination:ContactView(contact: $myContacts[index])) {
+                        ContactTeaser(contact: myContacts[index])
                     }
                 }
             }
             .navigationTitle("People I Know")
         }
-        
     }
 }
 
