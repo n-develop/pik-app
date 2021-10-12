@@ -18,12 +18,12 @@ struct ContactTeaser: View {
                 .cornerRadius(50)
             
             VStack(alignment:.leading){
-                Text("\(contact.firstname) \(contact.lastname)")
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                Text("\(contact.firstname ?? "") \(contact.lastname ?? "")")
+                    .fontWeight(.bold)
                     .foregroundColor(Color.accentColor)
-                Text("\(contact.email)")
+                Text("\(contact.email ?? "")")
                     .font(.caption)
-                Text("\(contact.address)")
+                Text("\(contact.address ?? "")")
                     .font(.caption)
             }
             Spacer()

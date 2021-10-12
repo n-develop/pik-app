@@ -14,8 +14,11 @@ let contacts: [Contact] = [
 ]
 
 struct Contact {
-    var firstname: String
-    var lastname: String
-    var email: String
-    var address: String
+    var firstname: String?
+    var lastname: String?
+    var email: String?
+    var address: String?
+    var employer: String?
+    var businessTitle: String?
+    var tags: String?
 }
