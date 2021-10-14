@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 let contacts: [Contact] = [
     Contact(firstname: "Lars", lastname: "Richter", email: "lars@my-awesome-url.whoop", address: "Somestreet 123"),
@@ -21,4 +22,11 @@ struct Contact {
     var employer: String?
     var businessTitle: String?
     var tags: String?
+    
+    let gradient: LinearGradient = {
+        let colors: [Color] = [.orange, .pink, .purple, .red, .yellow]
+        return LinearGradient(gradient: Gradient(colors: [colors.randomElement()!, colors.randomElement()!]), startPoint: .center, endPoint: .topTrailing)
+      }()
+    
+    let thumbnail = Image(systemName: "person.crop.circle")
 }
